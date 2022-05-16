@@ -19,7 +19,7 @@
       <!-- 登陆的div -->
       <div class="login-box">
         <!-- 登陆的表单 -->
-        <form class="layui-form" action="">
+        <form class="layui-form" action="" id="form_login">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
             <!-- 用户名 -->
@@ -40,7 +40,7 @@
               type="password"
               name="password"
               required
-              lay-verify="required"
+              lay-verify="required|pwd"
               placeholder="请输入密码"
               autocomplete="off"
               class="layui-input"
@@ -62,7 +62,7 @@
       </div>
       <!-- 注册的div -->
       <div class="reg-box">
-        <form class="layui-form" action="">
+        <form class="layui-form" action="" id="form_reg">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
             <!-- 用户名 -->
@@ -83,7 +83,7 @@
               type="password"
               name="password"
               required
-              lay-verify="required"
+              lay-verify="required|pwd"
               placeholder="请输入密码"
               autocomplete="off"
               class="layui-input"
@@ -96,7 +96,7 @@
               type="password"
               name="confirmPassword"
               required
-              lay-verify="required"
+              lay-verify="required|pwd|repwd"
               placeholder="请确认密码"
               autocomplete="off"
               class="layui-input"
@@ -120,5 +120,6 @@
     <!-- 导入jquery -->
     <script src="./assets/lib/jquery.js"></script>
     <script src="./assets/js/login.js"></script>
+    <script src='./assets/lib/layui/layui.all.js'></script>
   </body>
 </html>
