@@ -31,7 +31,7 @@ $(function () {
         password: $("#form_reg [name=password]").val(),
       },
       (res) => {
-          console.log(res)
+          // console.log(res)
         if (res.status !== 0) return layer.msg("只想弱弱提示注册失败");
         layer.msg("成功啦");
       }
@@ -45,7 +45,7 @@ $(function () {
         method: "POST",
         data:$('#form_login').serialize(),
         success: res=>{
-            console.log(res)
+            // console.log(res)
             if(res.status!==0) return layer.msg('登陆失败')
             layer.msg('登陆成功')
             localStorage.setItem('token',res.token)

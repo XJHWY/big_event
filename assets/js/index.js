@@ -19,7 +19,7 @@ function getuserinfo() {
     method: "GET",
     url:"/my/userinfo",
     success: (res) => {
-      console.log(JSON.stringify(res));
+      // console.log(JSON.stringify(res));
       if (res.status !== 0) return 
       // 渲染头像
       renderAvatar(res.data);
@@ -31,11 +31,11 @@ function getuserinfo() {
 renderAvatar = function (user) {
   // 获取name属性
   let name = user.nickname || user.username;
-  // 设置欢迎文本
+  // 设置欢迎文本  
   $("#welcome").html("欢迎&nbsp;&nbsp" + name);
   // 按需渲染头像
-  if (user.user_pic !== null) {
-    $(".layui-nav-img").attr = ("src", user.user_img).show();
+  if (user.user_pic!== null) {
+    $(".layui-nav-img").attr('src',user.user_pic).show();
     $(".text-avatar").hide();
   } else {
     $(".layui-nav-img").hide();
